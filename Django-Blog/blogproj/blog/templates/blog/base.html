@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="site-header">
-      <script src="{% static 'js/navbar.js' %}"></script>
+      <!-- <script src="{% static 'js/navbar.js' %}"></script> -->
 
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
@@ -193,71 +193,18 @@
                 <li class="list-group-item list-group-item-light">etc</li>
               </ul>
             </p>  -->
-
-            <div
-              class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
-              style="width: 380px"
-              style="padding-top: 120px"
-            >
-              <a
-                id="list-group"
-                style="text-decoration: none"
-                href=""
-                class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom"
-              >
-                <!-- <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
-                <span class="fs-5 fw-semibold" id="gist-btn">Lo último en la NASA </span>
-                <img src="/media/NASA_logo.svg" alt="">
-              </a>
-
-              <div class="container">
-                <h3 id="titulo" class="pt-5 text-center"></h3>
-                <p id="fecha" class="text-center"></p>
-                <p id="descripcion" class="lead pt-5"></p>
-
-                <div id="c_multimedia" class="text-center"></div>
+            {% block conditional_content %}
+              <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px" style="padding-top: 120px">
+                <a id="list-group" style="text-decoration: none" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">                <span class="fs-5 fw-semibold" id="gist-btn">Lo último en la NASA </span> </a>
+                <div class="container">
+                  <h3 id="titulo" class="pt-5 text-center"></h3>
+                  <p id="fecha" class="text-center"></p>
+                  <p id="descripcion" class="lead pt-5"></p>
+                  <div id="c_multimedia" class="text-center"></div>
+                  
+                </div>
               </div>
-
-              <!-- <div class="list-group list-group-flush border-bottom scrollarea">
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action lh-tight"
-                  aria-current="true"
-                >
-                  <div
-                    class="d-flex w-100 align-items-center justify-content-between"
-                  >
-                    <strong class="mb-1">TExto </strong>
-                    <small>TExto</small>
-                  </div>
-                  <div class="col-10 mb-1 small">TExto</div>
-                </a>
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-3 lh-tight"
-                >
-                  <div
-                    class="d-flex w-100 align-items-center justify-content-between"
-                  >
-                    <strong class="mb-1">TExto</strong>
-                    <small class="text-muted">TExto</small>
-                  </div>
-                  <div class="col-10 mb-1 small">TExto</div>
-                </a>
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-3 lh-tight"
-                >
-                  <div
-                    class="d-flex w-100 align-items-center justify-content-between"
-                  >
-                    <strong class="mb-1">TExto</strong>
-                    <small class="text-muted">Mon</small>
-                  </div>
-                  <div class="col-10 mb-1 small">TExto</div>
-                </a>
-              </div> -->
-            </div>
+            {% endblock %}
           </div>
         </div>
       </div>
