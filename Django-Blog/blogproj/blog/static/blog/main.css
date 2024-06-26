@@ -292,7 +292,12 @@ button {
   margin-top: auto; /* Asegura que el footer se quede al fondo */
 }
 
-.card {
-  background-color: #000;
+.container {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
+.card {
+  background-color: #f1f1f1;
+  align-items: center;
+
+}
