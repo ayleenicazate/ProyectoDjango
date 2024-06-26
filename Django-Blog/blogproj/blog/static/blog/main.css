@@ -292,4 +292,7 @@ button {
   margin-top: auto; /* Asegura que el footer se quede al fondo */
 }
 
+.card {
+  background-color: #000;
+}
 

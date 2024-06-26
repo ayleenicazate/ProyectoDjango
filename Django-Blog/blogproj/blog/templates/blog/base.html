@@ -173,7 +173,9 @@
         </div>
       </nav>
     </header>
+    
     <main role="main" class="container">
+      {% block conditional_content %}
       <div class="row">
         <div class="col-md-8">
           {% if messages %} {% for message in messages %}
@@ -181,7 +183,7 @@
           {% endfor %} {% endif %}
         </div>
         <div class="col-md-8">{% block content %}{% endblock %}</div>
-        {% block conditional_content %}
+        
         <div class="col-md-4">
           
           <div class="content-sectionw">
@@ -201,9 +203,9 @@
             
           </div>
         </div>
-        {% endblock %}
+        
       </div>
-
+      {% endblock %}
       <script src="{% static 'js/footer.js' %}"></script>
       <script src="{% static 'js/nasapi.js' %}"></script>
       {% block extra_scripts %}{% endblock %}

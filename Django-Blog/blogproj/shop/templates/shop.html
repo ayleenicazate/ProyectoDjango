@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %} 
-
+{% block conditional_content %}
 <div class="container align-items-center">
   <div class="card" style="width:800px">
     <h3>Membresía Premium</h3>
@@ -26,6 +26,6 @@
     <a href=""><button>Más Información</button></a>
   </div>
 </div>
-{% block conditional_content %}
+
 {% endblock %}
 {% endblock content %}
