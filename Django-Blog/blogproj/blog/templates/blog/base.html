@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="site-header">
-      <!-- <script src="{% static 'js/navbar.js' %}"></script> -->
+      <script src="{% static 'js/navbar.js' %}"></script>
 
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
@@ -181,19 +181,13 @@
           {% endfor %} {% endif %}
         </div>
         <div class="col-md-8">{% block content %}{% endblock %}</div>
+        {% block conditional_content %}
         <div class="col-md-4">
+          
           <div class="content-sectionw">
             <br />
-            <!-- <h3>TExto</h3>
-            <p class='text-muted'>TExto.
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p>  -->
-            {% block conditional_content %}
+
+            
               <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px" style="padding-top: 120px">
                 <a id="list-group" style="text-decoration: none" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">                <span class="fs-5 fw-semibold" id="gist-btn">Lo último en la NASA </span> </a>
                 <div class="container">
@@ -204,9 +198,10 @@
                   
                 </div>
               </div>
-            {% endblock %}
+            
           </div>
         </div>
+        {% endblock %}
       </div>
 
       <script src="{% static 'js/footer.js' %}"></script>

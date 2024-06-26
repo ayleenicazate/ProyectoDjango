@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var authLinks = [
                 { text: 'Crear Post', url: '/new-post/' },
                 { text: 'Perfil', url: '/profile/' },
-                { text: 'Salir', url: '/logout/' }
+                { text: 'Salir', url: '/login/' }
             ];
 
             authLinks.forEach(function(link) {
