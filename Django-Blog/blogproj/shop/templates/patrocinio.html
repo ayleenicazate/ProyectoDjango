@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %} 
+{% block conditional_content %}
+<p>{% url 'shop' %}</p>
+<p>{% url 'membresia' %}</p>
+<p>{% url 'patrocinio' %}</p>
+{% endblock %}
+{% endblock content %}

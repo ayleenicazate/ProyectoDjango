@@ -33,7 +33,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name="logout"),
     # url de shop si el usuario está autenticado
 
-    path('shop/', include('shop.urls')),
+    path('/shop/', include('shop.urls')),
 ]
 
 if settings.DEBUG:
