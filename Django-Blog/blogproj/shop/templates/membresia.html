@@ -2,7 +2,19 @@
 {% load static %}
 {% block content %} 
 {% block conditional_content %}
+<div class="containerr">
+    <div class="card">
+        <div id="paypal-button-container"></div>
+        <script type="module" src="{% static 'js/paypal.js' %}"></script>
+        <p id="result-message"></p>
+    
+    <!-- Initialize the JS-SDK -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=test"
+      data-sdk-integration-source="developer-studio"
+    ></script>
+    </div>
 
-
+</div>
 {% endblock %}
 {% endblock content %}

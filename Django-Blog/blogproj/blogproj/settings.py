@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap4',
     'shop',
+    'rest_framework',
 ]
+PAYPAL_CLIENT_ID = 'AQ2n6zER4j9akwofTennLh84jG1PA8oDQYfmVL5ONKSCcSvGbWG6Sb0-lxRglvKwjGdTu2G9z94iQEDx'
+PAYPAL_CLIENT_SECRET = 'AQ2n6zER4j9akwofTennLh84jG1PA8oDQYfmVL5ONKSCcSvGbWG6Sb0-lxRglvKwjGdTu2G9z94iQEDx'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .functions import generarAccessToken
 def shop(request):
     return render(request, 'shop.html')
 
@@ -8,3 +8,5 @@ def membresia(request):
 
 def patrocinio(request):
     return render(request, 'patrocinio.html')
+
+
