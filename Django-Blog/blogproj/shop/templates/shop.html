@@ -1,0 +1,63 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %} 
+{% block conditional_content %}
+<div class="containerr">
+  <div class="card">
+    <h3>Membresía Premium</h3>
+    <p>$99.99 al mes</p>
+    <ul>
+      <li>Acceso a contenido exclusivo</li>
+      <li>Descuentos especiales en productos y servicios</li>
+      <li>Webinars y eventos virtuales</li>
+      <li>Soporte prioritario</li>
+    </ul>
+    <a href="{% url 'membresia' %}"><button>Obtener Membresía</button></a>
+  </div>
+
+  <div class="card">
+    <h3>Patrocinios</h3>
+    <p>Desde $500 por evento</p>
+    <ul>
+      <li>Visibilidad en nuestras redes sociales</li>
+      <li>Mención en el evento y material promocional</li>
+      <li>Oportunidad de colaboración exclusiva</li>
+    </ul>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoModal" >
+      Más Información
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Más Información</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: fit-content;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 style="font-weight: bold;">Beneficios del Patrocinio</h6>
+        <p>Obten visibilidad en nuestras redes sociales, mención en eventos y material promocional exclusivo.</p>
+        <h6 style="font-weight: bold;">Niveles de Patrocinio</h6>
+        <p>Ofrecemos niveles de patrocinio: Plata, Oro, y Platino, cada uno con beneficios específicos.</p>
+        <h6 style="font-weight: bold;">Proceso de Patrocinio</h6>
+        <p>Desde la solicitud hasta la implementación, te guiamos en cada paso del proceso de patrocinio.</p>
+        <h6 style="font-weight: bold;">Testimonios</h6>
+        <p>"El patrocinio con esta organización ha sido increíblemente beneficioso para nuestra marca." - Patrocinador Anterior</p>
+      </div>
+      <div class="modal-footer" style="width: 100%; justify-content: center;">
+        <a href="{% url 'patrocinio' %}"><button >Obtener Patrocinio</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+{% endblock content %}

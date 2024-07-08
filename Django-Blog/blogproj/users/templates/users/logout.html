@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+<div class="content-section">
+  <form method="get" action="{% url 'login' %}">
+    {% csrf_token %}
+    <!-- capa de seguridad contra las falsas peticiones http -->
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">Hello</legend>
+      <h4>You just logged out</h4>
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">Logout</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
